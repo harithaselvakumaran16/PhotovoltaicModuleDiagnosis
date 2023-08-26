@@ -8,4 +8,11 @@ also higher than others and results in a larger and extremely hot area.<br>
 c) Hot spot: A hot spot is the most common PV module defect. Hot spot results in a higher temperature and may be caused by many reasons, including short circuits, overhead objects, surface 
 fouling, cell material defects, cell cracks, broken glass, and so on.
 
+<b>Very Deep Convolutional Neural Network for Large-Scale Image </b>
+
+Recognition (VGG16) Architecture: The input to a VGG16 has to be a fixed 224 x 224 RGB image. The architecture starts with two sets of 2 convolutional layers followed by 1 max-pooling layer, further it has 3 sets of 3 convolutional layers followed by 1 max-pooling layer. After this, there are 3 fully connected layers in the form of 1 x 1 x 1000, i.e the output shows 1000 classes as it was trained on the ImageNet dataset. This final layer can be built as to our preference based on the number of classes in our dataset, which is 4 in this case. VGG16 seemed to capture more complex features as compared to AlexNet because of the deep neural network that it is and due to the increased layers. The convolutional base layers were frozen as they captured the general features. The final classifier was built on top of it according to the problem as it captures problem-specific features. The last layer was to be flattened and then a dense layer was created, with 4 output classes and the activation function used was softmax. The softmax function classes the output probabilities of each class in the range [0,1]. These probabilities add up to 1 and therefore are better used for multinomial logistic regression as compared to binary classification.
+
+
+
+
 
